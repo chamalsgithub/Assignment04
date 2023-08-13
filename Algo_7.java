@@ -1,10 +1,10 @@
-
 import java.util.Scanner;
 
-public class Algo_6 {
+public class Algo_7 {
     private static final Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         String sentence;
+        
         
         loop1:
         do {
@@ -20,14 +20,23 @@ public class Algo_6 {
         } while (true);
 
         String[] words = sentence.split("\\s+");
-        StringBuilder reversed = new StringBuilder();
-            for (int i = words.length - 1; i >= 0; i--) {
-                reversed.append(words[i]);
-                if (i > 0) {
-                    reversed.append(" ");
-                }
+        String shortest = words[0];
+        String longest = words[0];
+
+        for (int i = 1; i < words.length; i++) {
+            if (words[i].length() < shortest.length()) {
+                shortest = words[i];
             }
-        System.out.println(reversed);
-        
+        }
+
+        for (int i = 1; i < words.length; i++) {
+            if (words[i].length() > longest.length()) {
+                longest = words[i];
+            }
+        }
+
+        System.out.printf("Shortest word is : %s \nLongest word is: %s \n", shortest ,longest);       
+
+
     }
 }
