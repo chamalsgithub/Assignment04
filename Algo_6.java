@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Algo_6 {
     private static final Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-        String sentence;
+       String sentence;
         
         loop1:
         do {
@@ -27,7 +27,30 @@ public class Algo_6 {
                     reversed.append(" ");
                 }
             }
-        System.out.println(reversed);
-        
+        System.out.println(reversed); 
+/* 
+        loop:
+        do {
+            System.out.println("Enter a text");
+         char[] chars = sc.nextLine().strip().toCharArray();
+         if(chars.length==0){
+            System.out.println("Text cant be empty");
+            continue;
+         }
+            int wordcount=1;
+            
+
+         for (int i = 0; i < chars.length; i++) {
+            if (chars[i]>128){System.out.println("Only ASCII characters are supported");}
+            continue loop;
+
+            if(chars[i]==' ')wordcount++;
+         }}
+
+         String 
+            
+        } while (true);
+*/
+    
     }
 }
